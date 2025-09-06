@@ -28,7 +28,7 @@ with st.sidebar:
 st.write(
     "Pick a step using the menu on the left."
 )
-
+selected_option == "Select an option..."
 if selected_step == "z00":
     cofactor_list = st.text_input("Cofactors to be applied:", value="[cf*1000.0 for cf in range(1,16)]", max_chars=500)
     st.write(cofactor_list)
