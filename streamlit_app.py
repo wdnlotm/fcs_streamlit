@@ -35,6 +35,8 @@ if selected_step == "z00":
     st.write(cofactor_list)
     clist = eval(cofactor_list)
     st.code(clist)
+    if st.button("Execute"):
+        st.write("Start!!")
 
 if selected_option == "Select an option...":
     st.write("No option selected yet.")
