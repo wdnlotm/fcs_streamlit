@@ -18,7 +18,6 @@ with st.sidebar:
     4. z03 - RAPIDS Leiden
     5. z04 - Pick a clustering
     """)
-    st.write('hello')
     selected_step = st.selectbox("Choose a step:", steps)
 
 ######### Main ##############
@@ -31,7 +30,8 @@ st.write(
 )
 options = ["Select a step...", "z00", "z01", "z02", "z03", "z04"]
 selected_option = st.selectbox("Choose a step:", options)
-
+if selected_step == "z00":
+    st.write("HELLO!!!")
 if selected_option == "Select an option...":
     st.write("No option selected yet.")
 elif selected_option == "z00":
