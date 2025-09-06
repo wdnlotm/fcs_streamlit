@@ -47,13 +47,13 @@ if selected_step == "z01":
     cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
     if st.button("Execute"):
         st.write("Start!!")
-            with st.spinner("working.."):
-                time.sleep(2) 
-                st.write(f"Step {selected_option} will perform batch effect correction by deploying CyCombine. An R code is involved.")
-                time.sleep(4) 
-                st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
-                time.sleep(4) 
-                st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
+        with st.spinner("working.."):
+            time.sleep(2) 
+            st.write(f"Step {selected_option} will perform batch effect correction by deploying CyCombine. An R code is involved.")
+            time.sleep(4) 
+            st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
+            time.sleep(4) 
+            st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
 # if selected_option == "Select an option...":
 #     st.write("No option selected yet.")
 # elif selected_option == "z00":
