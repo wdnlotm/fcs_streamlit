@@ -49,7 +49,7 @@ if selected_step == "z01":
         st.write("Start!!")
         with st.spinner("working.."):
             time.sleep(2) 
-            st.write(f"Step {selected_option} will perform batch effect correction by deploying CyCombine. An R code is involved.")
+            st.write(f"Step {selected_step} will perform batch effect correction by deploying CyCombine. An R code is involved.")
             time.sleep(4) 
             st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
             time.sleep(4) 
