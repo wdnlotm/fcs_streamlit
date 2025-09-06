@@ -45,6 +45,7 @@ if selected_step == "z00":
             st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
 if selected_step == "z01":
     cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
+    batch_file = st.text_input("Batch info file in csv file:", value="batch.csv", max_chars=500)
     if st.button("Execute"):
         st.write("Start!!")
         with st.spinner("working.."):
@@ -54,32 +55,17 @@ if selected_step == "z01":
             st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
             time.sleep(4) 
             st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
-# if selected_option == "Select an option...":
-#     st.write("No option selected yet.")
-# elif selected_option == "z00":
-#     with st.spinner("working.."):
-#         time.sleep(2) 
-#         st.write(f"Step {selected_option} will show marker density behavior depending on various cofactors. Users need to choose optimal cofactors")
-#         time.sleep(4) 
-#         st.image("images/nogroup_spect_marker_CD20_bw_0.5.png", caption="CD20 cofactors")
-#         time.sleep(4) 
-#         st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
-# elif selected_option == "z01":
-#     with st.spinner("working.."):
-#         time.sleep(2) 
-#         st.write(f"Step {selected_option} will perform batch effect correction by deploying CyCombine. An R code is involved.")
-#         time.sleep(4) 
-#         st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
-#         time.sleep(4) 
-#         st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
-# elif selected_option == "z02":
-#     with st.spinner("working.."):
-#         time.sleep(2) 
-#         st.write(f"Step {selected_option} will calculate the UMAP projection and the KNN graph edgelist.")
-#         time.sleep(4) 
-#         st.image("images/umap_density_b_cell_markers.png", caption="UMAP with cell density")
-#         time.sleep(4) 
-#         st.image("images/umap_markers_b_cell_markers.png", caption="UMAP with clustering marker expressions")
+if selected_step == "z02":
+    markerclass_file = st.text_input("A file with antigen & (marker) class columns", value="cofactors.csv", max_chars=500)
+    if st.button("Execute"):
+        st.write("Start!!")
+        with st.spinner("working.."):
+            time.sleep(2)  
+            st.write(f"Step {selected_step} will calculate the UMAP projection and the KNN graph edgelist.")
+            time.sleep(4) 
+            st.image("images/umap_density_b_cell_markers.png", caption="UMAP with cell density")
+            time.sleep(4) 
+            st.image("images/umap_markers_b_cell_markers.png", caption="UMAP with clustering marker expressions")
 # elif selected_option == "z03":
 #     with st.spinner("working.."):
 #         time.sleep(2) 
