@@ -45,7 +45,7 @@ if selected_step == "z00":
             st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
 if selected_step == "z01":
     cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
-    batch_file = st.text_input("Batch info file in csv file:", value="batch.csv", max_chars=500)
+    batch_file = st.text_input("Batch info in csv file:", value="batch.csv", max_chars=500)
     if st.button("Execute"):
         st.write("Start!!")
         with st.spinner("working.."):
@@ -66,25 +66,28 @@ if selected_step == "z02":
             st.image("images/umap_density_b_cell_markers.png", caption="UMAP with cell density")
             time.sleep(4) 
             st.image("images/umap_markers_b_cell_markers.png", caption="UMAP with clustering marker expressions")
-# elif selected_option == "z03":
-#     with st.spinner("working.."):
-#         time.sleep(2) 
-#         st.write(f"Step {selected_option} will perform the Leiden clustering. GPU-based library from RAPIDS will be utilized.")
-#         time.sleep(4) 
-#         text1 = """ ('computation time = 0:00:19.661074', 'resolution =  0.1')
-# <br>('number of cluster = 4', 'modularity score = 0.9303182363510132', 'big enough clusters (>0.5%) = 4', 'big enough cluster total = 100.0')
-# <br>partition <br>0 - 51.762528 <br>1 - 28.081759 <br>2 - 14.900670 <br>3 - 5.255043 """
-#         st.write(text1,unsafe_allow_html=True)
-#         text2 = """ <br>('computation time = 0:00:22.542235', 'resolution =  0.2') <br>
-# ('number of cluster = 5', 'modularity score = 0.9076583981513977', 'big enough clusters (>0.5%) = 5', 'big enough cluster total = 100.0') <br>
-# partition <br> 0 - 30.091424 <br> 1 - 27.072061 <br> 2 - 22.021883 <br> 3 - 15.555258 <br> 4 - 5.259374 """
-#         time.sleep(4) 
-#         st.write(text2,unsafe_allow_html=True)
-#         text3 = """ <br>('computation time = 0:00:15.527664', 'resolution =  0.3')<br>
-# ('number of cluster = 7', 'modularity score = 0.8825947046279907', 'big enough clusters (>0.5%) = 6', 'big enough cluster total = 99.60883336830247')
-# <br> partition <br>4 - 28.466626 <br>1 - 27.592773 <br>3 - 15.566114 <br>0 - 11.511122 <br>2 - 11.214568 <br>5 - 5.257631 <br>6 - 0.391167"""
-#         time.sleep(4) 
-#         st.write(text3,unsafe_allow_html=True)
+if selected_step == "z03":
+    rp_list = st.text_input("resolution parameters to be applied:", value="[0.1, 0.2, 0.3]", max_chars=500)
+    if st.button("Execute"):
+        st.write("Start!!")
+        with st.spinner("working.."):
+            time.sleep(2)  
+            st.write(f"Step {selected_step} will perform the Leiden clustering. GPU-based library from RAPIDS will be utilized.")
+            time.sleep(4) 
+            text1 = """ ('computation time = 0:00:19.661074', 'resolution =  0.1')
+    <br>('number of cluster = 4', 'modularity score = 0.9303182363510132', 'big enough clusters (>0.5%) = 4', 'big enough cluster total = 100.0')
+    <br>partition <br>0 - 51.762528 <br>1 - 28.081759 <br>2 - 14.900670 <br>3 - 5.255043 """
+            st.write(text1,unsafe_allow_html=True)
+            text2 = """ <br>('computation time = 0:00:22.542235', 'resolution =  0.2') <br>
+    ('number of cluster = 5', 'modularity score = 0.9076583981513977', 'big enough clusters (>0.5%) = 5', 'big enough cluster total = 100.0') <br>
+    partition <br> 0 - 30.091424 <br> 1 - 27.072061 <br> 2 - 22.021883 <br> 3 - 15.555258 <br> 4 - 5.259374 """
+            time.sleep(4) 
+            st.write(text2,unsafe_allow_html=True)
+            text3 = """ <br>('computation time = 0:00:15.527664', 'resolution =  0.3')<br>
+    ('number of cluster = 7', 'modularity score = 0.8825947046279907', 'big enough clusters (>0.5%) = 6', 'big enough cluster total = 99.60883336830247')
+    <br> partition <br>4 - 28.466626 <br>1 - 27.592773 <br>3 - 15.566114 <br>0 - 11.511122 <br>2 - 11.214568 <br>5 - 5.257631 <br>6 - 0.391167"""
+            time.sleep(4) 
+            st.write(text3,unsafe_allow_html=True)
 # elif selected_option == "z04":
 #     with st.spinner("working.."):
 #         time.sleep(2) 
