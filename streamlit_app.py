@@ -7,7 +7,7 @@ st.title("🎈 High dimensional cytometry data analysis")
 ######### Side ##############
 # Instructions to run the app
 with st.sidebar:
-    st.header("FCS analysis)
+    st.header("FCS analysis")
 # st.sidebar.header("FCS analysis")
 st.sidebar.markdown(
     """
