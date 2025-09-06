@@ -4,6 +4,7 @@ import time
 st.set_page_config(page_title="high dimensional cytometry", page_icon="🎈")
 st.title("🎈 High dimensional cytometry data analysis")
 
+steps = ["Select a step...", "z00", "z01", "z02", "z03", "z04"]
 ######### Side ##############
 # Instructions to run the app
 with st.sidebar:
@@ -18,6 +19,7 @@ with st.sidebar:
     5. z04 - Pick a clustering
     """)
     st.write('hello')
+    selected_step = st.selectbox("Choose a step:", steps)
 
 ######### Main ##############
 # if st.button("Click me!"):
