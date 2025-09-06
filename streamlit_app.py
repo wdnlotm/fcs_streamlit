@@ -26,10 +26,9 @@ with st.sidebar:
 #     # Add your desired action code here
 
 st.write(
-    "Pick a step. The results will be displayed."
+    "Pick a step using the menu on the left."
 )
-options = ["Select a step...", "z00", "z01", "z02", "z03", "z04"]
-selected_option = st.selectbox("Choose a step:", options)
+
 if selected_step == "z00":
     cofactor_list = st.text_input("Cofactors to be applied:", value="[cf*1000.0 for cf in range(1,16)]", max_chars=500)
     st.write(cofactor_list)
