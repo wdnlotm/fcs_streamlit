@@ -43,6 +43,7 @@ if selected_step == "z00":
             st.image("images/nogroup_spect_marker_CD20_bw_0.5.png", caption="CD20 cofactors")
             time.sleep(4) 
             st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
+
 if selected_step == "z01":
     cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
     batch_file = st.text_input("Batch info in csv file:", value="batch.csv", max_chars=500)
@@ -55,6 +56,7 @@ if selected_step == "z01":
             st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
             time.sleep(4) 
             st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
+
 if selected_step == "z02":
     markerclass_file = st.text_input("A file with antigen & (marker) class columns", value="cofactors.csv", max_chars=500)
     if st.button("Execute"):
@@ -66,6 +68,7 @@ if selected_step == "z02":
             st.image("images/umap_density_b_cell_markers.png", caption="UMAP with cell density")
             time.sleep(4) 
             st.image("images/umap_markers_b_cell_markers.png", caption="UMAP with clustering marker expressions")
+
 if selected_step == "z03":
     rp_list = st.text_input("resolution parameters to be applied:", value="[0.1, 0.2, 0.3]", max_chars=500)
     if st.button("Execute"):
@@ -88,27 +91,28 @@ if selected_step == "z03":
     <br> partition <br>4 - 28.466626 <br>1 - 27.592773 <br>3 - 15.566114 <br>0 - 11.511122 <br>2 - 11.214568 <br>5 - 5.257631 <br>6 - 0.391167"""
             time.sleep(4) 
             st.write(text3,unsafe_allow_html=True)
-# elif selected_option == "z04":
-#     with st.spinner("working.."):
-#         time.sleep(2) 
-#         st.write(f"Step {selected_option} will examine clustering results to move forward with one.")
-#         time.sleep(6) 
-#         st.image("images/rp0.100_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
-#         time.sleep(2) 
-#         st.image("images/rp0.100_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
-#         time.sleep(4) 
-#         st.image("images/rp0.100_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster")    
 
-#         time.sleep(6) 
-#         st.image("images/rp0.200_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
-#         time.sleep(2) 
-#         st.image("images/rp0.200_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
-#         time.sleep(4) 
-#         st.image("images/rp0.200_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
+if selected_step == "z04":
+    with st.spinner("working.."):
+        time.sleep(2) 
+        st.write(f"Step {selected_step} will examine clustering results to move forward with one.")
+        time.sleep(6) 
+        st.image("images/rp0.100_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
+        time.sleep(2) 
+        st.image("images/rp0.100_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
+        time.sleep(4) 
+        st.image("images/rp0.100_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster")    
 
-#         time.sleep(6) 
-        # st.image("images/rp0.300_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
-        # time.sleep(2) 
-        # st.image("images/rp0.300_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
-        # time.sleep(4) 
-        # st.image("images/rp0.300_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
+        time.sleep(6) 
+        st.image("images/rp0.200_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
+        time.sleep(2) 
+        st.image("images/rp0.200_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
+        time.sleep(4) 
+        st.image("images/rp0.200_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
+
+        time.sleep(6) 
+        st.image("images/rp0.300_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
+        time.sleep(2) 
+        st.image("images/rp0.300_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
+        time.sleep(4) 
+        st.image("images/rp0.300_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
