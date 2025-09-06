@@ -43,6 +43,7 @@ if selected_step == "z00":
             st.image("images/nogroup_spect_marker_CD20_bw_0.5.png", caption="CD20 cofactors")
             time.sleep(4) 
             st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
+            st.caption("This is a small caption.")
 
 if selected_step == "z01":
     cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
