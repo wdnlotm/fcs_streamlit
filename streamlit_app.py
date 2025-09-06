@@ -34,7 +34,7 @@ if selected_step == "z00":
     cofactor_list = st.text_input("Tell us about yourself:", value="[cf for cf in range(1,6)]", max_chars=500)
     st.write(cofactor_list)
     clist = eval(cofactor_list)
-    st.write(clist)
+    st.code(clist)
 
 if selected_option == "Select an option...":
     st.write("No option selected yet.")
