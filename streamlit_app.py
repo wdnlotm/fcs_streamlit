@@ -43,7 +43,17 @@ if selected_step == "z00":
             st.image("images/nogroup_spect_marker_CD20_bw_0.5.png", caption="CD20 cofactors")
             time.sleep(4) 
             st.image("images/nogroup_spect_marker_IgD_bw_0.5.png", caption="IgD cofactors")
-
+if selected_step == "z01":
+    cofactor_file = st.text_input("Cofactors in csv file:", value="cofactors.csv", max_chars=500)
+    if st.button("Execute"):
+        st.write("Start!!")
+            with st.spinner("working.."):
+                time.sleep(2) 
+                st.write(f"Step {selected_option} will perform batch effect correction by deploying CyCombine. An R code is involved.")
+                time.sleep(4) 
+                st.image("images/Pre_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="PRE batch correction")
+                time.sleep(4) 
+                st.image("images/Post_batch_correction_markers_w_custom_cofactor_nogroup.png", caption="POST batch correction")
 # if selected_option == "Select an option...":
 #     st.write("No option selected yet.")
 # elif selected_option == "z00":
@@ -108,8 +118,8 @@ if selected_step == "z00":
 #         st.image("images/rp0.200_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
 
 #         time.sleep(6) 
-        st.image("images/rp0.300_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
-        time.sleep(2) 
-        st.image("images/rp0.300_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
-        time.sleep(4) 
-        st.image("images/rp0.300_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
+        # st.image("images/rp0.300_cluster_umap_b_cell_markers_hogan.png", caption="Cluster UMAP")
+        # time.sleep(2) 
+        # st.image("images/rp0.300_one_vs_others_b_cell_markers_hogan.png", caption="Cluster overlap")
+        # time.sleep(4) 
+        # st.image("images/rp0.300_marker_density_by_partition_b_cell_markers_hogan.png", caption="Marker expression by cluster") 
