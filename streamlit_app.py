@@ -17,10 +17,6 @@ st.sidebar.markdown(
     5. z04 - Pick a clustering
     """
 )
-with st.sidebar:
-    steps = ["Select a step...", "z00", "z01", "z02", "z03", "z04"]
-    selected_step = st.selectbox("Choose a step:", options)
-
 ######### Main ##############
 # if st.button("Click me!"):
 #     st.write("Button clicked! Performing action...")
