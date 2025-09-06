@@ -14,7 +14,7 @@ with st.sidebar:
     st.markdown(
     """
     * There are five steps for the round one.
-    1. z00 - explore cofactors hi
+    1. z00 - explore cofactors
     2. z01 - batch correction
     3. z02 - knn & umap
     4. z03 - RAPIDS Leiden
