@@ -16,19 +16,9 @@ with st.sidebar:
     3. z02 - knn & umap
     4. z03 - RAPIDS Leiden
     5. z04 - Pick a clustering
-    """
-)
-# st.sidebar.header("FCS analysis")
-# st.sidebar.markdown(
-#     """
-#     * There are five steps for the round one.
-#     1. z00 - explore cofactors
-#     2. z01 - batch correction
-#     3. z02 - knn & umap
-#     4. z03 - RAPIDS Leiden
-#     5. z04 - Pick a clustering
-#     """
-# )
+    """)
+    st.write('hello')
+
 ######### Main ##############
 # if st.button("Click me!"):
 #     st.write("Button clicked! Performing action...")
