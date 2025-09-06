@@ -31,7 +31,9 @@ st.write(
 options = ["Select a step...", "z00", "z01", "z02", "z03", "z04"]
 selected_option = st.selectbox("Choose a step:", options)
 if selected_step == "z00":
-    st.write("HELLO!!!")
+    cofactor_list = st.text_input("Tell us about yourself:", value="[cf for cf in range(1,6)]", max_chars=500)
+    st.write(cofactor_list)
+
 if selected_option == "Select an option...":
     st.write("No option selected yet.")
 elif selected_option == "z00":
