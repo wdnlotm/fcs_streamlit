@@ -39,7 +39,7 @@ if selected_step == "z00":
         st.write("Start!!")
         with st.spinner("working.."):
             time.sleep(2) 
-            st.write(f"Step {selected_option} will show marker density behavior depending on various cofactors. Users need to choose optimal cofactors")
+            st.write(f"Step {selected_step} will show marker density behavior depending on various cofactors. Users need to choose optimal cofactors")
             time.sleep(4) 
             st.image("images/nogroup_spect_marker_CD20_bw_0.5.png", caption="CD20 cofactors")
             time.sleep(4) 
